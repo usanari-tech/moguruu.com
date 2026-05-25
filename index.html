@@ -6,7 +6,13 @@
     <title>moguruu</title>
     <meta
       name="description"
-      content="個人で動かす自動化、記録、Web実験。Codex、Cloudflare、生成AI、定期実行を使いながら、小さく使える仕組みを作って残す場所。"
+      content="水面下の実験と記録。個人で動かす自動化、Web、Agent、定期実行のログを静かに残す場所。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,9 +20,10 @@
     <header class="site-header" aria-label="サイトヘッダー">
       <a class="brand" href="/">moguruu</a>
       <nav class="nav" aria-label="主要ナビゲーション">
-        <a href="#lab">LAB</a>
         <a href="#log">LOG</a>
-        <a href="#tools">TOOLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#notes">NOTES</a>
+        <a href="#lab">LAB</a>
         <a href="#links">LINKS</a>
       </nav>
     </header>
@@ -24,39 +31,90 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">PERSONAL WEB LAB</p>
-          <h1 id="hero-title">moguruu</h1>
+          <p class="eyebrow">DEPTH 00 / PERSONAL ARCHIVE</p>
+          <h1 id="hero-title">潜る。</h1>
           <p class="lead">
-            個人で動かす自動化、記録、Web実験。
-            小さく使える仕組みを作って残す場所。
+            水面下の実験と記録。
+            作ったもの、試したこと、まだ名前のない仕組みを静かに束ねる場所。
           </p>
         </div>
-        <div class="photo-strip" aria-label="抽象的な写真素材">
-          <div class="photo photo-a"></div>
-          <div class="photo photo-b"></div>
-          <div class="photo photo-c"></div>
+        <div class="depth-panel" aria-label="moguruuの記録メタ情報">
+          <div class="depth-image"></div>
+          <dl>
+            <div>
+              <dt>name</dt>
+              <dd>moguruu</dd>
+            </div>
+            <div>
+              <dt>field</dt>
+              <dd>projects / notes / automation</dd>
+            </div>
+            <div>
+              <dt>mode</dt>
+              <dd>build, observe, leave logs</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section class="section updates" id="log" aria-labelledby="log-title">
         <div class="section-heading">
           <p class="section-kicker">LOG</p>
-          <h2 id="log-title">更新記録</h2>
+          <h2 id="log-title">潜行ログ</h2>
         </div>
         <ol class="news-list">
           <li>
             <time datetime="2026-05-24">2026.05.24</time>
-            <a href="#">Codex環境への移行を開始</a>
+            <a href="#">Codex環境への移行を開始。FTPを使わない更新経路を作る。</a>
           </li>
           <li>
             <time datetime="2026-05-24">2026.05.24</time>
-            <a href="#">Cloudflare Pagesで静的サイトを準備</a>
+            <a href="#">Cloudflare Pagesで moguruu.com の配信を開始。</a>
           </li>
           <li>
             <time datetime="2026-05-24">2026.05.24</time>
-            <a href="#">AI Agent Labのトップページを作成</a>
+            <a href="#">公開実験を束ねるインデックスとして構成を整理。</a>
           </li>
         </ol>
+      </section>
+
+      <section
+        class="section projects"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading">
+          <p class="section-kicker">PROJECTS</p>
+          <h2 id="projects-title">公開中</h2>
+        </div>
+        <div class="project-list">
+          <a class="project-item" href="https://gov.moguruu.com/">
+            <span class="project-meta">01 / GOV</span>
+            <strong>gov.moguruu.com</strong>
+            <em>行政・社会情報まわりの公開実験。Cloudflare上で運用中。</em>
+          </a>
+          <a
+            class="project-item"
+            href="https://foodcomments.usanari-tech.workers.dev/dashboard"
+          >
+            <span class="project-meta">02 / FOOD COMMENTS</span>
+            <strong>Food Comments</strong>
+            <em>
+              食事写真に対して、あえて厳しめのコメントを返す記録補助アプリ。
+            </em>
+          </a>
+        </div>
+      </section>
+
+      <section class="section notes" id="notes" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <p class="section-kicker">NOTES</p>
+          <h2 id="notes-title">長い記録</h2>
+        </div>
+        <a class="note-link" href="https://note.com/usanari_tech">
+          <span>note.com/usanari_tech</span>
+          <strong>考えたこと、試したこと、制作ログを長めに残す場所。</strong>
+        </a>
       </section>
 
       <section class="section lab" id="lab" aria-labelledby="lab-title">
@@ -66,50 +124,36 @@
         </div>
         <div class="index-grid">
           <a class="index-item" href="#">
-            <span>01</span>
+            <span>DEPTH 01</span>
             <strong>Codex</strong>
-            <em>作業環境、実装、レビュー、運用</em>
+            <em>作業環境、実装、レビュー、運用の記録</em>
           </a>
           <a class="index-item" href="#">
-            <span>02</span>
+            <span>DEPTH 02</span>
             <strong>Automation</strong>
-            <em>定期実行、監視、ログ整理</em>
+            <em>定期実行、監視、ログ整理の設計</em>
           </a>
           <a class="index-item" href="#">
-            <span>03</span>
+            <span>DEPTH 03</span>
             <strong>Cloudflare</strong>
-            <em>Pages、DNS、小さなWeb配信</em>
+            <em>Pages、DNS、小さなWeb配信の構成</em>
           </a>
           <a class="index-item" href="#">
-            <span>04</span>
+            <span>DEPTH 04</span>
             <strong>Writing</strong>
             <em>note、X、公開メモの整形</em>
           </a>
         </div>
       </section>
 
-      <section class="section tools" id="tools" aria-labelledby="tools-title">
-        <div class="section-heading">
-          <p class="section-kicker">TOOLS</p>
-          <h2 id="tools-title">置き場</h2>
-        </div>
-        <div class="two-column">
-          <p>
-            使った手順、プロンプト、構成メモ、公開できる小さなツールをここに集めます。
-            完成品よりも、再利用できる断片を優先します。
-          </p>
-          <ul class="plain-list">
-            <li>Agent運用メモ</li>
-            <li>定期実行テンプレート</li>
-            <li>Cloudflare構成ログ</li>
-            <li>Codex作業ログ</li>
-          </ul>
-        </div>
-      </section>
     </main>
 
     <footer class="footer" id="links">
       <a href="https://gov.moguruu.com/">gov.moguruu.com</a>
+      <a href="https://foodcomments.usanari-tech.workers.dev/dashboard">
+        Food Comments
+      </a>
+      <a href="https://note.com/usanari_tech">note</a>
       <a href="https://github.com/usanari-tech/moguruu.com">GitHub</a>
       <span>© 2026 moguruu</span>
     </footer>
